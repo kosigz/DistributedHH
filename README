@@ -1,0 +1,23 @@
+@AUTHOR: Konstantin Gizdarski
+@DATE: November 24, 2013 - December 6, 2013
+@LOCATION: Boston, Massachusetts - Northeastern University
+
+Distributed Hungry Henry is a program created for Northeastern’s CS 2500 Fall 2013 Honors course.
+
+The program is comprised of a server and several clients. The game is entirely managed by the server to ensure fairness.
+
+That is to say, the server stores all the critical information, including the score, location and waypoints for each player, the location of all cupcakes. It sends each player their location and waypoints, as well as the locations and waypoints of all other players every clock tick. When no more cupcakes remain, the server sends all players an S-expression containing the “scores” of all the players.
+
+Information residing here:
+— Location of each player
+— Score of each player
+— Waypoints of every player
+— Locations of all cupcakes
+
+The clients’ job is essentially to render the relevant information about the world and to send information about where users click back to the server.
+
+Information needed by client:
+— Location of specific player
+— Waypoints of specific player
+— Location of all other players
+— Location of all cupcakes
